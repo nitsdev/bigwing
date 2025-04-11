@@ -33,21 +33,27 @@
     });
 
 
-    // Facts counter
-    $('[data-toggle="counter-up"]').counterUp({
-        delay: 10,
-        time: 2000
+    // Date and time picker
+    $('#date').datetimepicker({
+        format: 'L'
+    });
+    $('#time').datetimepicker({
+        format: 'LT'
     });
 
 
-    // Team carousel
-    $(".team-carousel").owlCarousel({
+    // Service carousel
+    $(".service-carousel").owlCarousel({
         autoplay: true,
-        smartSpeed: 1000,
-        center: true,
-        dots: true,
-        loop: true,
+        smartSpeed: 1500,
         margin: 30,
+        dots: false,
+        loop: true,
+        nav : true,
+        navText : [
+            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+        ],
         responsive: {
             0:{
                 items:1
@@ -65,13 +71,43 @@
     });
 
 
+    // Team carousel
+    $(".team-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1500,
+        margin: 30,
+        dots: false,
+        loop: true,
+        nav : true,
+        navText : [
+            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+        ],
+        responsive: {
+            0:{
+                items:1
+            },
+            576:{
+                items:2
+            },
+            768:{
+                items:3
+            },
+            992:{
+                items:4
+            }
+        }
+    });
+
+
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
+        center: true,
         autoplay: true,
         smartSpeed: 1000,
+        margin: 30,
         dots: true,
         loop: true,
-        margin: 30,
         responsive: {
             0:{
                 items:1
@@ -81,6 +117,9 @@
             },
             768:{
                 items:2
+            },
+            992:{
+                items:3
             }
         }
     });
